@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update User</title>
+</head>
+<body>
+<form th:object="${user}">
+  <label for="ID">ID</label>
+  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+  <br/>
+  <label for="name">Name</label>
+  <input readonly type="text" th:field="*{name}" id="name" placeholder="Name">
+  <br/>
+  <label for="email">email</label>
+  <input readonly type="text" th:field="*{email}" id="email" placeholder="Email">
+  <br/>
+  <label for="age">age</label>
+  <input readonly type="text" th:field="*{age}" id="age" placeholder="Age">
+</form>
+<form action="#" th:action="@{/logout}">
+  <input type="submit" value="Logout">
+</form>
+</body>
+</html>
